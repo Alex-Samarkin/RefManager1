@@ -58,8 +58,29 @@ namespace RefManager1
             /// 5 подумайте, будет ли эта ссылка видна в менеджере
             /// проверьте в отладчике ваше предположение
 
+            RefBase refBase = new RefBase()
+            {
+                Name = "О роли кротов в китайской литературе",
+                Description = "Китайцы о котах и кротах",
+                Text = "В 12 году правления императора Цы в провинции Шань расплодились кроты невероятных размеров",
+                Source = new Source()
+                {
+                    MainAuthor = new Author()
+                    {
+                        LastName = "Ло",
+                        MiddleName = "ван",
+                        Name = "Го"
+                    },
+                    Title = "Заметки путешественника",
+                    SubTitle = "о чудесном",
+                    Description = "Малоизвестный сборник заметок чиновника"
+                },
+                Comment = "Добавить к введению"
+            };
 
+            project.RefList.Add(refBase);
 
+            Console.ReadKey();
         }
     }
 }
