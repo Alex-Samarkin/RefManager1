@@ -39,11 +39,17 @@ namespace RefManager1
         /// Добавьте здесь свойства
         ///
         //prop // в качестве примера, раскомментируйте prop и нажмите за ним клавишу Tab
-        
+
+        public string User { get; set; } = String.Empty;
+        public string BaseFolder { get; set; } = String.Empty;
+        public string MainTheme { get; set; } = String.Empty;
+
 
         /// Откройте файл RefProject и доработайте класс проекта
         /// ПОТОМ ВЕРНИТЕСЬ СЮДА
         ///
         /// Добавьте список проектов <Property>Projects</Property> строкой ниже
+        ///
+        public List<RefProject> Projects { get; set; } = new List<RefProject>();
     }
 }

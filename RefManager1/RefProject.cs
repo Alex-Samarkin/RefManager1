@@ -25,10 +25,16 @@ namespace RefManager1
         /// = String.Empty;
         /// = new Author();
         ///
-        
+
         /// Добавьте свойства ниже этой строки
         ///
-        
+        public int Id { get; set; } = 0;
+
+        public string ProjectName { get; set; } = String.Empty;
+        public string Description { get; set; } = String.Empty;
+        public string Comment { get; set; } = String.Empty;
+
+        public Author Author { get; set; } = new Author();
 
         /// ТЕПЕРЬ ВЕРНИТЕСЬ К RefManager и добавьте к нему новое свойство - Projects
         /// это список проектов, за которые отвечает менеджер
