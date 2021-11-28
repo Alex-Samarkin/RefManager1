@@ -19,7 +19,7 @@ namespace RefManager1
         public string Text { get; set; } = String.Empty;
 
         /// <summary>
-        /// page or html
+        /// page or html - страница, страницЫ или место в html файле
         /// </summary>
         public string Place { get; set; } = String.Empty;
     }

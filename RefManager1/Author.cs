@@ -11,10 +11,25 @@ namespace RefManager1
     /// </summary>
     public class Author
     {
+        /// <summary>
+        /// имя автора
+        /// </summary>
         public string Name { get; set; } = String.Empty;
+        /// <summary>
+        /// отчество
+        /// </summary>
         public string MiddleName { get; set; } = String.Empty;
+        /// <summary>
+        /// фамилия
+        /// </summary>
         public string LastName { get; set; } = String.Empty;
+        /// <summary>
+        /// описание (если требуется)
+        /// </summary>
         public string Description { get; set; } = String.Empty;
+        /// <summary>
+        /// комментарий (если требуется)
+        /// </summary>
         public string Comment { get; set; } = String.Empty;
 
         public override string ToString()
