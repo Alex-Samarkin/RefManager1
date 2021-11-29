@@ -94,7 +94,14 @@ namespace RefManager1
             /// он позволяет вывести наши классы в консоль
             ///
             /// следующая версия - RefManager6, содержит примеры таких методов
-            /// 
+            ///
+            ///
+
+            /// печать ссылки
+            Console.WriteLine(refBase);
+            /// печать проекта
+            /// посмотрите файл RefProject, посмотрите, как организзован вывод всех ссылок
+            // Console.WriteLine(project);
 
             Console.ReadKey();
         }

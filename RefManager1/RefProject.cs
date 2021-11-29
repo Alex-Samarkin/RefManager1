@@ -38,5 +38,37 @@ namespace RefManager1
         /// список ссылок проекта
         /// </summary>
         public List<RefBase> RefList { get; set; } = new List<RefBase>();
+
+        /// 2 цитаты проекта
+        /// в данном случае цитат много (по крайней мере может быть), поэтому сначала
+        /// выводим базовую иннформацию о проекте
+        /// затем в цикле - все циататы, которые есть
+        /// для красоты разделяем начало и конец проекта, а также цитаты строками-разделителями
+        ///
+        public override string ToString()
+        {
+            /// конструктор строк
+            StringBuilder sb = new StringBuilder();
+            /// заголовок
+            sb.AppendLine(new string('=', 120));
+            sb.AppendLine($"{nameof(Id)}: {Id}, {nameof(ProjectName)}: {ProjectName}");
+            sb.AppendLine($"{nameof(Description)}: {Description},\n {nameof(Comment)}: {Comment}");
+            /// автор проекта
+            sb.AppendLine(new string('-', 60));
+            sb.AppendLine($"{nameof(Author)}: {Author}");
+            sb.AppendLine(new string('-', 60));
+            /// перебираем ссылки
+            foreach (var r in RefList)
+            {
+                sb.AppendLine(new string('*', 90));
+                sb.AppendLine(r.ToString());
+                sb.AppendLine(new string('*', 90));
+            }
+            /// закрываем вывод
+            sb.AppendLine(new string('=', 120));
+
+            return sb.ToString();
+            /// раскомментируйте строку с выводом проекта в консоль
+        }
     }
 }
